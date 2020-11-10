@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A Serverless Product</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="home">
+        <header>
+            <img src="logo.svg" class="logo">
+            <nav>
+               <a href="#" class="hide-desktop"><img src="ham.svg" alt="" id="menu"></a>
+
+               <ul class="show-desktop hide-mobile" id="nav">
+                   <li id="exit" class="exit-btn hide-desktop">
+                       <img src="exit.svg" alt="Exit Button">
+                   </li>
+                   <li><a href="#home">Home</a></li>
+                   <li><a href="#services">Services</a></li>
+                   <li><a href="#about">About</a></li>
+                   <li><a href="#contact">Contact</a></li>
+               </ul>
+            </nav>
+        </header>
+        <section>
+            <img src="server.svg" alt="Server Graphic" class="server">
+            <h1>Web Hosting for the Modern Era</h1>
+            <p class="subhead">Go serverless and pay only for what you use.</p>
+            <img src="scroll.svg" alt="scroll down icon" class="scroll" >
+        </section>
+    </div>
+        <div class="blue-container"id="services">
+            <div class="container" >
+                <ul>
+                    <li>
+                        <img src="icon-1.svg" alt="calendar icon">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                    </li>
+                    <li>
+                        <img src="icon-2.svg" alt="waller icon">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                    </li>
+                    <li>
+                        <img src="icon-3.svg" alt="mobile icon">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="gray-container">
+            <div class="container" id="about">
+                <ul>
+                    <li>
+                        <figure>
+                            <img src="user1.png" alt="some person">
+                            <blockquote>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas tenetur totam, dolore</blockquote>
+                        <figcaption>
+                            Jane Doe
+                        </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="user2.png" alt="some person">
+                            <blockquote>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas tenetur totam, dolore</blockquote>
+                        <figcaption>
+                            John Doe
+                        </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container" id="contact">
+            <h2>Start your free trial now!</h2>
+            <a href="#" class="cta">Get Started</a>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="container">
+                    <a href="#">
+                        <img src="logo.svg" class="logo" alt="">
+                    </a>
+                    <p class="address">Melrose Place, 90210<br>USA </p>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+</body>
+<script>
+    var menu = document.getElementById('menu');
+    var nav = document.getElementById('nav');
+    var exit = document.getElementById('exit');
+    console.log(menu);
+    menu.addEventListener('click',function(e){
+        console.log('btn');
+        nav.classList.toggle('hide-mobile');
+        e.preventdefault();
+    });
+    exit.addEventListener('click',function(e){
+        nav.classList.add('hide-mobile');
+        e.preventdefault();
+    });
+
+</script>
+</html>
